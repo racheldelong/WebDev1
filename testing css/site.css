@@ -1,0 +1,53 @@
+header>nav>ul>li {
+    display: flex;
+}
+
+nav>ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header {
+    background-color: #6FA597;
+    padding: 1px;
+    margin-top: 0;
+    margin: 0px;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    background-color: #FAF8DF;
+    background-image: url("images/hhp_background.PNG");
+    color: #32675b;
+}
+
+nav>ul>li>a {
+    color:#F4F5F0;
+    text-decoration: none;
+    font-size: large;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+main>div {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    color: #32675b;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.villagers ul {
+    max-width: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.villagers ul li {
+    list-style: none;
+    flex-basis: 33.33333%;
+}
