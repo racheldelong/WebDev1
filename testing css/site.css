@@ -40,14 +40,28 @@ main>div {
 }
 
 .villagers ul {
-    max-width: 500px;
+    /*max-width: 500px;*/
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    padding: 0px;
 }
 
 .villagers ul li {
     list-style: none;
-    flex-basis: 33.33333%;
+    /*flex-basis: 33.33333%;*/
+    flex-basis: auto;
+}
+
+.villager-icon {
+    width: 96px;
+    height: 96px;
+    border: 0;
+}
+
+.villager-header {
+    font-size: 1.4em;
+    text-align: center;
+    margin: 20px 0px 10px 0px
 }
