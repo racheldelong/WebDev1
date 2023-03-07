@@ -40,7 +40,7 @@
                 }
                 const li = document.createElement('li');
                 li.innerHTML = `<img src="images/icons/${icon}.png" class="designIcon" title="${getDesignTitle(icon)}" alt="${getDesignTitle(icon)}" 
-                onclick="document.getElementById('iconImage').src='images/designs/${icon}.jpg'" style="cursor: pointer; cursor: hand;"/>`      
+                onclick="document.getElementById('iconImage').src='images/designs/${icon.toLowerCase()}.jpg'" style="cursor: pointer; cursor: hand;"/>`      
                 list.appendChild(li);
             })
         </script>
