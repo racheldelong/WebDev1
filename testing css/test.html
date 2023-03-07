@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="site.css" type="text/css">
+    <title>Current Residents of Talulah Island (ACNH)</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">&nbsp; home</a></li>
+                <li><a href="designs.html">custom designs</a></li>
+                <li><img src="images/logo2.png"><a href="villagers.html">current villagers</a></li>
+                <li><a href="https://twitter.com/morethan5kits">twitter &nbsp;</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>   
+        <div class="villagers">
+            <h1 class="villager-header">Villager Homes</h1>
+            <p><i>Click a villager portrait to view their redesigned home.</i></p>
+
+<!--
+<button onclick="document.getElementById('image').src='images/homes/biff_int.jpg'"><img src="images/villagers/biff.webp"></button>
+
+<button onclick="document.getElementById('image').src='images/homes/harry_int.jpg'"><img src="images/villagers/harry.webp"></button>
+
+<img id="image" src="images/homes/biff_int.jpg">
+
+-->
+                <ul id="VillagerIcons"></ul>
+                <script>
+                    //let data = ["item1", "item2", "item3", "item4"];
+                    const villagers = ['Biff', 'Sherb', 'Pekoe', 'Vivian', 'Tammi', 'Pashmina', 'Marty', 'Harry', 'Merengue', 'Tiansheng']
+                    let list = document.getElementById("VillagerIcons");
+                    villagers.forEach(function(villager) {
+                        const li = document.createElement('li');
+                        li.innerHTML = `<img src="images/villagers/${villager.toLowerCase()}.webp" class="villager-icon" title="${villager}" alt="${villager} icon" onclick="document.getElementById('image').src='images/homes/${villager.toLowerCase()}_int.jpg'"/>`
+                        ///li.innerHTML = `<button onclick="document.getElementById('image').src='images/homes/${villager.toLowerCase()}_int.jpg'"><img src="images/villagers/${villager.toLowerCase()}.webp" class="villager-icon" title="${villager}" alt="${villager} icon"></button>`
+                        list.appendChild(li);
+                    })
+                </script>
+                <img id="image" src="images/iconmap.png">
+
+                </div>
+</body>
+</html>

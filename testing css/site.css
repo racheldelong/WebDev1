@@ -1,18 +1,28 @@
-header>nav>ul>li {
-    display: flex;
-}
-
-nav>ul {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
 header {
     background-color: #6FA597;
     padding: 1px;
     margin-top: 0;
     margin: 0px;
+}
+
+header > nav > ul > li {
+    display: flex;
+}
+
+nav>ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0px;
+}
+
+nav > ul > li > a {
+    color:#F4F5F0;
+    text-decoration: none;
+    font-size: medium;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+
 }
 
 body {
@@ -21,26 +31,19 @@ body {
     background-color: #FAF8DF;
     background-image: url("images/hhp_background.png");
     color: #32675b;
+    font-family:Montserrat, Geneva, Tahoma, sans-serif;
 }
 
-nav>ul>li>a {
-    color:#F4F5F0;
-    text-decoration: none;
-    font-size: large;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
-}
-
-main>div {
+main > div {
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
     color: #32675b;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-family:Montserrat, Geneva, Tahoma, sans-serif;
 }
 
-.villagers ul {
-    /*max-width: 500px;*/
+.icons ul {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -48,20 +51,70 @@ main>div {
     padding: 0px;
 }
 
-.villagers ul li {
+.icons ul li {
     list-style: none;
     /*flex-basis: 33.33333%;*/
     flex-basis: auto;
 }
 
 .villager-icon {
-    width: 96px;
-    height: 96px;
-    border: 0;
+    width: 80px;
+    height: 80px;
+    margin: 5px;
 }
 
-.villager-header {
+.header {
     font-size: 1.4em;
+    letter-spacing: 0.1em;
     text-align: center;
-    margin: 20px 0px 10px 0px
+    margin: 20px 0px 0px 0px
 }
+
+.navlogo {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.imageContainer {
+    display: grid;
+    height: 100%;
+}
+
+.designImage {
+    max-width: 100%;
+    max-height: 100vh;
+    margin: auto;
+}
+
+
+
+/*.designimg ul > li {
+    list-style: none;
+    flex-basis: auto;
+}
+
+.designimg ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+}*/
+
+.designIcon {
+    margin: 10px;
+}
+
+footer {
+    background-color: #6FA597;
+    color:#F4F5F0;
+    bottom: 0;
+    position: fixed;
+    width: 100%;
+}
+
+footer > p {
+    margin-left: 20px;
+}
+
+/** lighter teal: #75b5a7

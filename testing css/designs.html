@@ -4,35 +4,52 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,500;1,300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="site.css" type="text/css">
-    <title>Custom Designs | Talulah (ACNH)</title>
-
+    <title>Talulah Island: Custom Designs (ACNH)</title>
 </head>
 <body>
     <header>
         <nav>
             <ul>
-                <li><img src="images/logo2.png"><a href="index.html">&nbsp; home</a></li>
-                <li><a href="designs.html">designs</a></li>
-                <li><a href="villagers.html">villagers</a></li>
-                <li><a href="https://twitter.com/morethan5kits">twitter &nbsp;</a></li>
+                <li><a href="index.html">home</a></li>
+                <li><img src="images/logo2.png" class="navlogo"><a href="designs.html">custom designs</a></li>
+                <!--<li><a href="villagers.html">current villagers</a></li>-->
+                <li><a href="about.html">about</a></li>
             </ul>
         </nav>
     </header>
-    <main>
-        <div>
-            <h2>Custom Designs</h2>
-            <div class="design">
-            <img src="images/designs/seafood_sign.jpg" alt="Seafood Restaurant Sign">
-            <div class="columns">
-                <p>Seafood Restaurant Sign</p>
-            </div>
-            <div class="design">
-            <img src="images/designs/seafood_stall.jpg" alt="Seafood Restaurant Stall">
-            <div class="columns">
-                <p>Seafood Restaurant Stall</p>
-            </div>
+    <main>   
+        <h1 class="header">custom designs</h1>
+        <div class="icons">
+            <ul id="Icons"></ul>
+            <p><i>Click a facility icon to view the custom designs & design codes.</i></p>
         </div>
+        <div class="imageContainer">
+            <img id="iconImage" class="designImage" src="images/logo.png">
+        </div>
+
+        <script>
+            const icons = ['Fishing_Pond', 'Butterfly_Garden', 'Cafe_Merengue', 'Farm_Stand', 'Florist_Shop', 'Fresh_Seafood', 'OK_Motors', 'Orchard_Market', 'Ramen_Stall', 'Pizza_Restaurant', 'Thrift_Shop', 'Bed_and_Breakfast', 'Ice_Cream_Stall', 'Interactive_Garden']
+            let list = document.getElementById("Icons");
+            icons.forEach(function(icon) {
+                function getDesignTitle(icon) {
+                    return icon.replace('_', ' ')
+                }
+                const li = document.createElement('li');
+                li.innerHTML = `<img src="images/icons/${icon}.png" class="designIcon" title="${getDesignTitle(icon)}" alt="${getDesignTitle(icon)}" 
+                onclick="document.getElementById('iconImage').src='images/designs/${icon}.jpg'" style="cursor: pointer; cursor: hand;"/>`      
+                list.appendChild(li);
+            })
+        </script>
+        
+
     </main>
+
+    <footer>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </footer>
 </body>
 </html>
