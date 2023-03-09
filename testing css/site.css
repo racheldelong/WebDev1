@@ -138,7 +138,7 @@ footer {
     transition: 0.4s;
     font-family:Montserrat, Geneva, Tahoma, sans-serif;
     font-weight:500;
-    font-size:medium;
+    font-size:large;
   }
   
   /* background color when clicked */
@@ -150,8 +150,9 @@ footer {
   /* Style the accordion panel. Note: hidden by default */
   .panel {
     padding: 0 18px;
-    background-color: white;
-    width:100%;
+    background-color: #F4F5F0;
+    color: #32675b;
+    width: 100%;
     text-align: center;
     display: none;
     overflow: hidden;
