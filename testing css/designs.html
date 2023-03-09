@@ -21,28 +21,103 @@
             </ul>
         </nav>
     </header>
-    <main>   
-        <h1 class="header">custom designs</h1>
-        <div class="icons">
-            <ul id="Icons"></ul>
-            <p><i>Click a facility icon to view the custom designs & design codes.</i></p>
-        </div>
-        <div class="imageContainer">
-            <img id="iconImage" class="designImage" src="images/logo.png">
-        </div>
+    <main>
+        <div min-height="100%"> 
+            <h1 class="header">custom designs</h1>
+            <div class="icons">
+                <ul id="Icons"></ul>
+            </div>
+            <div class="imageContainer">
+                <img id="iconImage" class="designImage" src="images/logo.png">
+            </div>
+            <button class="accordion">my designs</button>
+            <div class="panel">
+                <p id="myPanel"><em>Click an island feature icon to get the custom design codes.</em></p>
+            </div>
+
+            <button class="accordion">other designs used</button>
+            <div class="panel">
+                <p id="otherPanel"><em>Click an island feature icon to see creator codes for other designs used.</em></p>
+            </div>
+        </div>  
 
         <script>
+            // accordion boxes below image
+            var acc = document.getElementsByClassName("accordion");
+            var i;
+
+            for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.display === "block") {
+                panel.style.display = "none";
+                } else {
+                panel.style.display = "block";
+                }
+            });
+            }
+
+            // create clickable icons to show image of each facility
             const icons = ['Fishing_Pond', 'Butterfly_Garden', 'Cafe_Merengue', 'Farm_Stand', 'Florist_Shop', 'Fresh_Seafood', 'OK_Motors', 'Orchard_Market', 'Ramen_Stall', 'Pizza_Restaurant', 'Thrift_Shop', 'Bed_and_Breakfast', 'Ice_Cream_Stall', 'Interactive_Garden']
+
+            const myCodes = {
+                'Fishing_Pond':'Fishing Pond sign: <strong>MO-RXNW-2HW8-3811</strong>', 
+                'Butterfly_Garden':'Recycle Paper Newspaper: <strong>MO-08B2-BR4W-NS3S</strong><br>Butterfly Garden sign: <strong>MO-QYKL-9RD7-MRG6</strong>', 
+                'Cafe_Merengue':'Electric Sign matched cafe design: <strong>MO-M16T-M0T5-8KBX</strong>', 
+                'Farm_Stand':'Farm Stand sign: <strong>MO-YM5K-K820-JGYV</strong>', 
+                'Florist_Shop':'Field Sign matched florist stall design: <strong>MO-JRNH-Y35Y-GYQT</strong><br>Gardening catalog: <strong>MO-DQQF-2N4K-9X2G</strong>', 
+                'Fresh_Seafood':'Fresh Seafood chalk sign: <strong>MO-B3NX-S310-BWYL</strong><br>Seafood stall awning: <strong>MO-HLS0-YPN7-62PC', 
+                'OK_Motors':'OK Motors pump logo: <strong>MO-PLQK-37C2-0N2V</strong><br>OK Motors stall awning: <strong>MO-8YG6-TYC2-S5L2</strong><br>Glass window panel: <strong>MO-WVWW-L9D7-89SC</strong><br>Glass door panel: <strong>MO-T187-0497-YVK8</strong><br>Fresh Seafood chalk sign: <strong>MO-B3NX-S310-BWYL</strong><br>Recycle Paper matched newspaper: <strong>MO-08B2-BR4W-NS3S</strong>', 
+                'Orchard_Market':'Orchard Plaza Market sign: <strong>MO-73ML-33DG-VNVJ</strong><br>Fruit strip stall awning: <strong>MO-MRCY-4V81-KB02</strong>', 
+                'Ramen_Stall':'Ramen electric sign: <strong>MO-BHK1-NMTD-QWT1</strong><br>Ramen stall menu sign: <strong>MO-SRFP-2DRP-5WXG</strong>', 
+                'Pizza_Restaurant':'Pizza electric sign: <strong>MO-JMCX-P8GL-PJSD</strong><br>Pizza stall awning: <strong>MO-4X3P-Y8WB-F1JM</strong>', 
+                'Thrift_Shop':'Thrift Shop stall awning: <strong>MO-97HF-6TGH-9FHC</strong><br>Nook leaf logo: <strong>MO-H3SC-S7JM-YJ34</strong><br>Orchard Plaza Market sign: <strong>MO-73ML-33DG-VNVJ</strong>', 
+                'Bed_and_Breakfast':'Bed and Breakfast sign: <strong>MO-8LPJ-4LJ2-X71C</strong><br>Teal matching window panel: <strong>MO-F3Q5-PR2T-FXD5</strong>', 
+                'Ice_Cream_Stall':'Ice cream menu paper: <strong>MO-84R1-2F0C-JJ0V</strong><br>Pink shell gravel: <strong>MO-N9Q1-0T8X-8HX4</strong>', 
+                'Interactive_Garden':'Pink shell gravel: <strong>MO-N9Q1-0T8X-8HX4</strong><br>Floral terracotta tile: <strong>MO-G0ND-2NVN-F6LV</strong>'
+            }
+
+            const otherCodes = {
+                'Fishing_Pond':'Stepping stones by Gnawbones: <strong>MA-4805-8002-3215</strong><br>Old wood floor by Sand: <strong>MA-7178-6216-1127</strong><br>Antique wooden door: <strong>MA-1944-3607-0570</strong><br>Seasonal weed design: <strong>MA-6249-5786-0459</strong><br>Dark wood edge on stalls by Salt: <strong>MA-0066-0469-7996</strong>', 
+                'Butterfly_Garden':'Bordered brick path by siro: <strong>MA-4030-1704-1000</strong><br>Brick bridge by Marta: <strong>MA-1198-6708-6242</strong>', 
+                'Cafe_Merengue':'Warm plaza tiles by Babie: <strong>MA-6810-3988-5865</strong><br>Seasonal chainlink fence hedges: <strong>MA-9095-8200-0742</strong>', 
+                'Farm_Stand':'Bordered brick path by siro: <strong>MA-4030-1704-1000</strong>', 
+                'Florist_Shop':'Dark gravel by Vee: <strong>MA-5116-9644-5826</strong><br>Bordered brick path by siro: <strong>MA-4030-1704-1000</strong>', 
+                'Fresh_Seafood':'Brickies overlay by Julie: <strong>MA-5501-5023-8888</strong>', 
+                'OK_Motors':'Bordered brick path by siro: <strong>MA-4030-1704-1000</strong>', 
+                'Orchard_Market':'Bordered brick path by siro: <strong>MA-4030-1704-1000</strong><br>Dirt path by Kim: <strong>MA-7376-5758-0005</strong><br>Seasonal chainlink fence hedges: <strong>MA-9095-8200-0742</strong>', 
+                'Ramen_Stall':'Old gray brick: <strong>MA-2614-2734-1310</strong>', 
+                'Pizza_Restaurant':'Brick bridge by Marta: <strong>MA-1198-6708-6242</strong><br>Grassy brick: <strong>MA-6496-8883-7689</strong>', 
+                'Thrift_Shop':'Bordered brick path by siro: <strong>MA-4030-1704-1000</strong><br>Dirt path by Kim: <strong>MA-7376-5758-0005</strong><br>Brickies overlay by Julie: <strong>MA-5501-5023-8888</strong>', 
+                'Bed_and_Breakfast':'Cream bricks by Gladium: <strong>MA-8802-6244-8020</strong>', 
+                'Ice_Cream_Stall':'Bordered brick path by siro: <strong>MA-4030-1704-1000</strong>', 
+                'Interactive_Garden':'Zen sand patterns by Becca: <strong>MA-9246-0808-4302</strong>'
+            }
+
             let list = document.getElementById("Icons");
             icons.forEach(function(icon) {
+                
                 function getDesignTitle(icon) {
-                    return icon.replace('_', ' ')
+                    return icon.replace('_', ' ');
                 }
+
                 const li = document.createElement('li');
-                li.innerHTML = `<img src="images/icons/${icon}.png" class="designIcon" title="${getDesignTitle(icon)}" alt="${getDesignTitle(icon)}" 
-                onclick="document.getElementById('iconImage').src='images/designs/${icon.toLowerCase()}.jpg'" style="cursor: pointer; cursor: hand;"/>`      
+
+                li.innerHTML = `<img src="images/icons/${icon}.png" 
+                    class="designIcon" 
+                    title="${getDesignTitle(icon)}" 
+                    alt="${getDesignTitle(icon)}" 
+                    onclick="document.getElementById('iconImage').src='images/designs/${icon.toLowerCase()}.jpg';document.getElementById('myPanel').innerHTML='${myCodes[icon]}';document.getElementById('otherPanel').innerHTML='${otherCodes[icon]}'" 
+                    style="cursor: pointer; cursor: hand;"/>`      
+
                 list.appendChild(li);
+                // onclick="document.getElementById('iconImage').src='images/designs/${icon.toLowerCase()}.jpg'; change_text()" 
             })
+
+
+
+
         </script>
         
 
